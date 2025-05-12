@@ -260,7 +260,7 @@ namespace ArrayPractice
 
             for (int i = chars.Length ; i > 0; i--)
             { 
-                char RevChar = chars[i-1];//NOT REVERCIMG FIX 
+                char RevChar = chars[i-1];//NOT REVERSING FIX 
             }
 
             string RevString = "";
