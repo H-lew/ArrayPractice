@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# IDE0180: Use tuple to swap values
+dotnet_diagnostic.IDE0180.severity = none
