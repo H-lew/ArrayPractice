@@ -15,11 +15,8 @@ namespace ArrayPractice
         //palindrome detector without allocating new string
 
 
-        static void Main()// its unused and idk what its for
+        static void Main()
         {
-
-
-
             //int[] example;
             //example = new int[3];
             //example[0] = 1;
@@ -76,7 +73,8 @@ namespace ArrayPractice
             }
 
             Console.WriteLine("reverced string is:");
-            string REALRevString = ReverseString("Cowabunga");
+            string REALRevString = ReverseString("This is backwards: agnubawoC");
+            //cowabunga
             for (int i = 0; i < REALRevString.Length; i++)
             {
                 Console.WriteLine($"{REALRevString[i]}");
@@ -106,7 +104,6 @@ namespace ArrayPractice
                     idk = numbers[i];
                 }
             }
-            //Console.WriteLine($"SMALLEST:{idk}");
             return (idk);
 
         }
@@ -121,7 +118,6 @@ namespace ArrayPractice
                     idk = numbers[i];
                 }
             }
-            //Console.WriteLine($"BIIGGEST:{idk}");
             return (idk);
         }
         static int Mean(int[] numbers)
@@ -132,7 +128,6 @@ namespace ArrayPractice
                 mean = numbers[i] + mean;
             }
             mean /= numbers.Length;
-            // Console.WriteLine($"MEAN:{mean}");
 
             return (mean);
         }
@@ -140,11 +135,9 @@ namespace ArrayPractice
         {
             int med = numbers.Length / 2;
             med = numbers[med];
-            //   Console.WriteLine($"MEDIAN:{med}");
 
             return (med);
         }
-        //look at mc PAINT TO REMEMBER   V
         static int Mode(int[] numbers)
         {
             int[] numbers2 = new int[10];
@@ -168,12 +161,6 @@ namespace ArrayPractice
                 numbers2[i] = numbers2[smaller];
                 numbers2[smaller] = extra;
             }
-
-
-
-
-
-
 
             int mode = numbers[0];
             int modeCount = 0;
@@ -205,7 +192,7 @@ namespace ArrayPractice
             return (mode);
         }
 
-        //numbers =10 length     ljnjbkjbkjhbkjbjkb            rev = 9 length c
+       
         static int[] Reverse(int[] numbers)
         {
             int[] REVarray = new int[numbers.Length];
@@ -235,43 +222,26 @@ namespace ArrayPractice
                 numbers[i] = numbers[smaller];
                 numbers[smaller] = extra;
 
-                //for (int k = 0; k < numbers.Length; k++)
-                //{
-                //    if (numbers[k] == smaller)
-                //    {
-                //        numbers[k] = extra;
-                //    }
-                //}
+        
 
             }
             return numbers;
         }
         static string ReverseString(string input)
         {
-            //  int[] data = new int[10];
+   
             char[] chars = new char[input.Length];
 
             for (int i = 0; i < chars.Length; i++)
             {
                 chars[i] = input[i];
             }
-            //string[] REVarray = new Array 
-            
-
-            for (int i = chars.Length ; i > 0; i--)
-            { 
-                char RevChar = chars[i-1];//NOT REVERSING FIX 
-            }
-
-            string RevString = "";
-
+            string result = "";
             for (int i = 0; i < chars.Length; i++)
-            {
-                RevString += chars[i];
+            { 
+                  result += chars[chars.Length - i - 1];
             }
-
-            return RevString;
-            //chars[i] = input
+            return result;
             //     copy data to new char array from og string
             // rev data like int array
             // copy data from new chars to string -----finiish this
